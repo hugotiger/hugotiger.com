@@ -6,7 +6,7 @@ export default function Banner() {
     <Styled.Banner>
       <h1>
         Hi <span className="wave">👋</span>
-        <br></br>My name is Hugo Holm
+        <br></br>My name is Hugo
       </h1>
       <p>
         I've always had a big interest in UI/UX-design and I usually spend a lot
