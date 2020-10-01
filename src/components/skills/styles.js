@@ -12,6 +12,7 @@ const Wrapper = styled.section`
     margin: 0;
     font-size: 1.5rem;
     margin-bottom: 12px;
+    font-weight: 600;
   }
   .desc {
     margin-top: 0;

@@ -18,7 +18,9 @@ export default function Projects() {
             style={{ display: "flex", margin: 0 }}
           >
             <Styled.ImageWrapper>
-              <img src={Journal} />
+              <div className="image-inner">
+                <img src={Journal} />
+              </div>
               <Styled.Pill variant="done">Finished</Styled.Pill>
             </Styled.ImageWrapper>
           </a>
@@ -36,7 +38,9 @@ export default function Projects() {
             style={{ display: "flex", margin: 0 }}
           >
             <Styled.ImageWrapper>
-              <img src={Beer} />
+              <div className="image-inner">
+                <img src={Beer} />
+              </div>
               <Styled.Pill variant="done">Finished</Styled.Pill>
             </Styled.ImageWrapper>
           </a>

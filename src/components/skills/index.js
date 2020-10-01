@@ -42,7 +42,7 @@ export default function Skills() {
           <ul>
             <li>Git</li>
             <li>Redux</li>
-            <li>Styled Components</li>
+            <li>CSS-in-JS</li>
             <li>Framer Motion</li>
             <li>Adobe Suite</li>
             <li>Jest</li>

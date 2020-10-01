@@ -6,6 +6,7 @@ const Wrapper = styled.section`
     margin: 0;
     font-size: 1.5rem;
     margin-bottom: 12px;
+    font-weight: 600;
   }
   .desc {
     margin-top: 0;
@@ -51,8 +52,17 @@ const GridItem = styled.div`
     text-decoration: none;
     font-weight: 500;
 
+    &:not(:first-of-type):hover {
+      border-bottom: 1px solid #335eea;
+    }
+
     &:last-of-type {
       margin-left: 16px;
+      color: #506690;
+
+      &:hover {
+        border-color: #506690;
+      }
     }
   }
 `
@@ -61,14 +71,24 @@ const ImageWrapper = styled.div`
   box-shadow: 0 16px 32px rgba(22, 28, 45, 0.05);
   border-radius: 6px;
   width: 100%;
-  height: 270px;
+  padding-top: 66.67%;
+  position: relative;
+  /* height: 270px; */
   overflow: hidden;
   position: relative;
   user-select: none;
+  .image-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
   img {
     width: 100%;
     object-fit: cover;
   }
+
   &::after {
     position: absolute;
     top: 0;
