@@ -85,12 +85,12 @@ const Pill = styled.span`
   display: block;
   padding: 4px 12px;
   font-size: 12px;
+  font-weight: 500;
   text-transform: uppercase;
   z-index: 5;
   background: ${({ variant }) =>
     variant === "done" ? "#2eb67f" : variant === "active" ? "#FAC83E" : "gray"};
-  color: ${({ variant }) =>
-    variant === "done" ? "rgba(255, 255, 255, 0.8)" : "#1B2A4E"};
+  color: ${({ variant }) => (variant === "done" ? "white" : "#1B2A4E")};
   letter-spacing: 1.6px;
   border-radius: 999px;
   user-select: none;
