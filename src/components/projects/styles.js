@@ -17,13 +17,15 @@ const Wrapper = styled.section`
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: row;
+  grid-gap: 4rem;
 
   @media (max-width: 1020px) {
+    grid-gap: 3rem;
+  }
+  @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
   }
-  grid-auto-flow: row;
-  grid-column-gap: 64px;
-  grid-row-gap: 64px;
 `
 
 const GridItem = styled.div`

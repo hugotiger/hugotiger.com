@@ -9,8 +9,8 @@ export default function Projects() {
       journal: file(relativePath: { eq: "journal.png" }) {
         childImageSharp {
           fluid(
-            maxWidth: 880
-            maxHeight: 560
+            maxWidth: 704
+            maxHeight: 448
             duotone: { highlight: "#c2cff9", shadow: "#2f4692", opacity: 80 }
           ) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
@@ -20,8 +20,8 @@ export default function Projects() {
       beerTracker: file(relativePath: { eq: "beer-tracker.png" }) {
         childImageSharp {
           fluid(
-            maxWidth: 880
-            maxHeight: 550
+            maxWidth: 704
+            maxHeight: 448
             duotone: { highlight: "#c2cff9", shadow: "#2f4692", opacity: 80 }
           ) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
@@ -31,8 +31,8 @@ export default function Projects() {
       carbonClock: file(relativePath: { eq: "carbon-clock.png" }) {
         childImageSharp {
           fluid(
-            maxWidth: 880
-            maxHeight: 550
+            maxWidth: 704
+            maxHeight: 448
             duotone: { highlight: "#c2cff9", shadow: "#2f4692", opacity: 50 }
             cropFocus: CENTER
           ) {
