@@ -28,7 +28,8 @@ const Wrapper = styled.section`
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  h3 {
+  h2 {
+    font-size: 1.2rem;
     margin: 0;
     margin-bottom: 16px;
     font-weight: 500;

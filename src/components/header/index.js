@@ -15,7 +15,7 @@ export default function Header() {
           href="https://github.com/hugotiger"
           title="Hugo Tiger's Github-profile"
         >
-          <IconButton icon={<GitHubIcon />} />
+          <IconButton icon={<GitHubIcon />} aria-label="GitHub" />
         </a>
       </Styled.Inner>
     </Styled.Header>

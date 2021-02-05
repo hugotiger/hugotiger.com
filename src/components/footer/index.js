@@ -12,6 +12,7 @@ export default function Footer({ ...restProps }) {
           as="a"
           href="mailto:hugo.tiger.holm@gmail.com"
           title="Send email"
+          aria-label="Send email"
           icon={<EmailIcon />}
         >
           Contact me

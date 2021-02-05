@@ -33,7 +33,7 @@ export default function Projects() {
           fluid(
             maxWidth: 880
             maxHeight: 550
-            duotone: { highlight: "#c3c3c3", shadow: "#000000" }
+            duotone: { highlight: "#c2cff9", shadow: "#2f4692", opacity: 50 }
             cropFocus: CENTER
           ) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
@@ -53,12 +53,14 @@ export default function Projects() {
       <Styled.Grid>
         <Styled.GridItem>
           <div className="img-wrapper">
-            <a href="https://journal.hugotiger.com">
+            <a href="https://journal.hugotiger.com" aria-label="Carbon Clock">
               <Img
                 fluid={data?.carbonClock?.childImageSharp?.fluid}
                 backgroundColor="#eaecf0"
               />
-              <Styled.Pill variant="done">Finished</Styled.Pill>
+              <Styled.Pill variant="done" aria-hidden="true">
+                Finished
+              </Styled.Pill>
             </a>
           </div>
           <div className="project-desc">
@@ -74,12 +76,17 @@ export default function Projects() {
         </Styled.GridItem>
         <Styled.GridItem>
           <div className="img-wrapper">
-            <a href="https://beertracker.hugotiger.com">
+            <a
+              href="https://beertracker.hugotiger.com"
+              aria-label="Beer Tracker"
+            >
               <Img
                 fluid={data?.beerTracker?.childImageSharp?.fluid}
                 backgroundColor="#eaecf0"
               />
-              <Styled.Pill variant="done">Finished</Styled.Pill>
+              <Styled.Pill variant="done" aria-hidden="true">
+                Finished
+              </Styled.Pill>
             </a>
           </div>
           <div className="project-desc">
@@ -94,12 +101,17 @@ export default function Projects() {
         </Styled.GridItem>
         <Styled.GridItem>
           <div className="img-wrapper">
-            <a href="https://journal.hugotiger.com">
+            <a
+              href="https://journal.hugotiger.com"
+              aria-label="Journal Travel Blog"
+            >
               <Img
                 fluid={data?.journal?.childImageSharp?.fluid}
                 backgroundColor="#eaecf0"
               />
-              <Styled.Pill variant="active">Experimental</Styled.Pill>
+              <Styled.Pill variant="active" aria-hidden="true">
+                Experimental
+              </Styled.Pill>
             </a>
           </div>
           <div className="project-desc">

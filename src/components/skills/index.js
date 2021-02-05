@@ -16,7 +16,7 @@ export default function Skills() {
       </p>
       <div className="grid">
         <div className="group">
-          <h3>Front-end</h3>
+          <h2>Front-end</h2>
           <ul>
             <li>HTML</li>
             <li>CSS</li>
@@ -27,7 +27,7 @@ export default function Skills() {
           </ul>
         </div>
         <div className="group">
-          <h3>Back-end</h3>
+          <h2>Back-end</h2>
           <ul>
             <li>Node JS</li>
             <li>MongoDB</li>
@@ -38,7 +38,7 @@ export default function Skills() {
           </ul>
         </div>
         <div className="group">
-          <h3>Other</h3>
+          <h2>Other</h2>
           <ul>
             <li>Git</li>
             <li>Redux</li>
