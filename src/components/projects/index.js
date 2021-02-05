@@ -1,8 +1,23 @@
 import React from "react"
-import { Styled } from "./styles"
+import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { Section } from "../Section"
+import { Pill } from "../Pill"
+import { ProjectItem } from "./ProjectItem"
 
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: row;
+  grid-gap: 4rem;
+
+  @media (max-width: 1020px) {
+    grid-gap: 3rem;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`
 export default function Projects() {
   const data = useStaticQuery(graphql`
     query {
@@ -44,131 +59,37 @@ export default function Projects() {
   `)
 
   return (
-    <Styled.Wrapper>
-      <h1>Featured projects</h1>
-      <p className="desc">
-        Here are some projects i've been working on recently. More will be added
-        soon.
-      </p>
-      <Styled.Grid>
-        <Styled.GridItem>
-          <div className="img-wrapper">
-            <a
-              href="https://carbonclock.hugotiger.com"
-              aria-label="Carbon Clock"
-              rel="noopener"
-              target="_blank"
-            >
-              <Img
-                fluid={data?.carbonClock?.childImageSharp?.fluid}
-                backgroundColor="#eaecf0"
-              />
-              <Styled.Pill variant="done" aria-hidden="true">
-                Finished
-              </Styled.Pill>
-            </a>
-          </div>
-          <div className="project-desc">
-            <h2>Carbon Clock</h2>
-            <p>
-              Carbon Clock is an estimation of how much CO2 can be released into
-              the atmosphere to limit global warming to a maximum of 1.5°C.
-            </p>
-            <a
-              href="https://carbonclock.hugotiger.com"
-              rel="noopener"
-              target="_blank"
-            >
-              Live demo ->
-            </a>
-            <a
-              href="https://github.com/hugotiger/carbon-clock"
-              rel="noopener"
-              target="_blank"
-            >
-              View code
-            </a>
-          </div>
-        </Styled.GridItem>
-        <Styled.GridItem>
-          <div className="img-wrapper">
-            <a
-              href="https://beertracker.hugotiger.com"
-              aria-label="Beer Tracker"
-              rel="noopener"
-              target="_blank"
-            >
-              <Img
-                fluid={data?.beerTracker?.childImageSharp?.fluid}
-                backgroundColor="#eaecf0"
-              />
-              <Styled.Pill variant="done" aria-hidden="true">
-                Finished
-              </Styled.Pill>
-            </a>
-          </div>
-          <div className="project-desc">
-            <h2>Beer Tracker</h2>
-            <p>
-              A simple webpage for tracking your beer consumption. Built using
-              the MERN-stack, styled-components and framer motion.
-            </p>
-            <a
-              href="https://beertracker.hugotiger.com"
-              rel="noopener"
-              target="_blank"
-            >
-              Live demo ->
-            </a>
-            <a
-              href="https://github.com/hugotiger/beer-tracker"
-              rel="noopener"
-              target="_blank"
-            >
-              View code
-            </a>
-          </div>
-        </Styled.GridItem>
-        <Styled.GridItem>
-          <div className="img-wrapper">
-            <a
-              href="https://journal.hugotiger.com"
-              aria-label="Journal Travel Blog"
-              rel="noopener"
-              target="_blank"
-            >
-              <Img
-                fluid={data?.journal?.childImageSharp?.fluid}
-                backgroundColor="#eaecf0"
-              />
-              <Styled.Pill variant="active" aria-hidden="true">
-                Experimental
-              </Styled.Pill>
-            </a>
-          </div>
-          <div className="project-desc">
-            <h2>Journal</h2>
-            <p>
-              Journal is a super simple travel blog concept showcasing some
-              fancy animations created using Framer Motion.
-            </p>
-            <a
-              href="https://journal.hugotiger.com"
-              rel="noopener"
-              target="_blank"
-            >
-              Live demo ->
-            </a>
-            <a
-              href="https://github.com/hugotiger/journal"
-              rel="noopener"
-              target="_blank"
-            >
-              View code
-            </a>
-          </div>
-        </Styled.GridItem>
-      </Styled.Grid>
-    </Styled.Wrapper>
+    <Section
+      title="Featured projects"
+      desc="Here are some projects i've been working on recently. More will be added soon."
+    >
+      <Grid>
+        <ProjectItem
+          title="Carbon Clock"
+          imgData={data?.carbonClock?.childImageSharp?.fluid}
+          demoUrl="https://carbonclock.hugotiger.com"
+          githubUrl="https://github.com/hugotiger/carbon-clock"
+          description="Carbon Clock is an estimation of how much CO2 can be released into the atmosphere to limit global warming to a maximum of 1.5°C."
+          pill={<Pill variant="done">Finished</Pill>}
+        />
+        <ProjectItem
+          title="Beer Tracker"
+          imgData={data?.beerTracker?.childImageSharp?.fluid}
+          demoUrl="https://beertracker.hugotiger.com"
+          githubUrl="https://github.com/hugotiger/beer-tracker"
+          description="A simple webpage for tracking your beer consumption. Built using the MERN-stack, styled-components and framer motion."
+          pill={<Pill variant="done">Finished</Pill>}
+        />
+        <ProjectItem
+          title="Journal Travel Blog"
+          imgData={data?.journal?.childImageSharp?.fluid}
+          demoUrl="https://journal.hugotiger.com"
+          githubUrl="https://github.com/hugotiger/journal"
+          description="Journal is a super simple travel blog concept showcasing some
+          fancy animations created using Framer Motion."
+          pill={<Pill variant="active">Experimental</Pill>}
+        />
+      </Grid>
+    </Section>
   )
 }

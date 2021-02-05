@@ -4,6 +4,10 @@ import { normalize } from "styled-normalize"
 export default createGlobalStyle`
   ${normalize}
 
+  :root {
+      --blue: #335eea;
+  }
+
   * {
       box-sizing: border-box;
   }
@@ -18,7 +22,6 @@ export default createGlobalStyle`
       font-family: 'Manrope', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       font-size: 16px;
       line-height: 1.6;
-      /* background: #fafbfd; */
       color: #161c2d;
   }
 

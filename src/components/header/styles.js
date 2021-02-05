@@ -25,7 +25,7 @@ const Inner = styled.div`
 
   .logo {
     font-weight: 700;
-    color: #335eea;
+    color: var(--blue);
     text-decoration: none;
   }
 `
