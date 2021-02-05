@@ -66,10 +66,14 @@ const GridItem = styled.div`
     border-radius: 6px;
     overflow: hidden;
     user-select: none;
-    transition: filter 0.2s;
 
-    &:hover {
-      filter: brightness(103%) saturate(130%);
+    .gatsby-image-wrapper {
+      transition: filter 0.2s;
+      filter: brightness(100%) saturate(100%);
+
+      &:hover {
+        filter: brightness(103%) saturate(130%);
+      }
     }
   }
 `

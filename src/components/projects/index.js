@@ -11,7 +11,7 @@ export default function Projects() {
           fluid(
             maxWidth: 880
             maxHeight: 560
-            duotone: { highlight: "#c2cff9", shadow: "#2f4692", opacity: 50 }
+            duotone: { highlight: "#c2cff9", shadow: "#2f4692", opacity: 80 }
           ) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
@@ -22,7 +22,7 @@ export default function Projects() {
           fluid(
             maxWidth: 880
             maxHeight: 550
-            duotone: { highlight: "#c2cff9", shadow: "#2f4692", opacity: 50 }
+            duotone: { highlight: "#c2cff9", shadow: "#2f4692", opacity: 80 }
           ) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
@@ -33,7 +33,7 @@ export default function Projects() {
           fluid(
             maxWidth: 880
             maxHeight: 550
-            duotone: { highlight: "#c3c3c3", shadow: "#000000", opacity: 50 }
+            duotone: { highlight: "#c3c3c3", shadow: "#000000" }
             cropFocus: CENTER
           ) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
@@ -56,7 +56,7 @@ export default function Projects() {
             <a href="https://journal.hugotiger.com">
               <Img
                 fluid={data?.carbonClock?.childImageSharp?.fluid}
-                backgroundColor="#e7ebf3"
+                backgroundColor="#eaecf0"
               />
               <Styled.Pill variant="done">Finished</Styled.Pill>
             </a>
@@ -68,14 +68,17 @@ export default function Projects() {
               Molestias sint mollitia omnis magni autem totam veritatis fugiat
               voluptatum tempora.
             </p>
-            <a href="https://journal.hugotiger.com">Live demo -></a>
-            <a href="https://github.com/hugotiger/journal">View code</a>
+            <a href="https://carbonclock.hugotiger.com">Live demo -></a>
+            <a href="https://github.com/hugotiger/carbon-clock">View code</a>
           </div>
         </Styled.GridItem>
         <Styled.GridItem>
           <div className="img-wrapper">
             <a href="https://beertracker.hugotiger.com">
-              <Img fluid={data?.beerTracker?.childImageSharp?.fluid} />
+              <Img
+                fluid={data?.beerTracker?.childImageSharp?.fluid}
+                backgroundColor="#eaecf0"
+              />
               <Styled.Pill variant="done">Finished</Styled.Pill>
             </a>
           </div>
@@ -92,7 +95,10 @@ export default function Projects() {
         <Styled.GridItem>
           <div className="img-wrapper">
             <a href="https://journal.hugotiger.com">
-              <Img fluid={data?.journal?.childImageSharp?.fluid} />
+              <Img
+                fluid={data?.journal?.childImageSharp?.fluid}
+                backgroundColor="#eaecf0"
+              />
               <Styled.Pill variant="active">Experimental</Styled.Pill>
             </a>
           </div>
