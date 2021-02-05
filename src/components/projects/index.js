@@ -53,7 +53,12 @@ export default function Projects() {
       <Styled.Grid>
         <Styled.GridItem>
           <div className="img-wrapper">
-            <a href="https://journal.hugotiger.com" aria-label="Carbon Clock">
+            <a
+              href="https://carbonclock.hugotiger.com"
+              aria-label="Carbon Clock"
+              rel="noopener"
+              target="_blank"
+            >
               <Img
                 fluid={data?.carbonClock?.childImageSharp?.fluid}
                 backgroundColor="#eaecf0"
@@ -66,12 +71,23 @@ export default function Projects() {
           <div className="project-desc">
             <h2>Carbon Clock</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Molestias sint mollitia omnis magni autem totam veritatis fugiat
-              voluptatum tempora.
+              Carbon Clock is an estimation of how much CO2 can be released into
+              the atmosphere to limit global warming to a maximum of 1.5°C.
             </p>
-            <a href="https://carbonclock.hugotiger.com">Live demo -></a>
-            <a href="https://github.com/hugotiger/carbon-clock">View code</a>
+            <a
+              href="https://carbonclock.hugotiger.com"
+              rel="noopener"
+              target="_blank"
+            >
+              Live demo ->
+            </a>
+            <a
+              href="https://github.com/hugotiger/carbon-clock"
+              rel="noopener"
+              target="_blank"
+            >
+              View code
+            </a>
           </div>
         </Styled.GridItem>
         <Styled.GridItem>
@@ -79,6 +95,8 @@ export default function Projects() {
             <a
               href="https://beertracker.hugotiger.com"
               aria-label="Beer Tracker"
+              rel="noopener"
+              target="_blank"
             >
               <Img
                 fluid={data?.beerTracker?.childImageSharp?.fluid}
@@ -95,8 +113,20 @@ export default function Projects() {
               A simple webpage for tracking your beer consumption. Built using
               the MERN-stack, styled-components and framer motion.
             </p>
-            <a href="https://beertracker.hugotiger.com">Live demo -></a>
-            <a href="https://github.com/hugotiger/beer-tracker">View code</a>
+            <a
+              href="https://beertracker.hugotiger.com"
+              rel="noopener"
+              target="_blank"
+            >
+              Live demo ->
+            </a>
+            <a
+              href="https://github.com/hugotiger/beer-tracker"
+              rel="noopener"
+              target="_blank"
+            >
+              View code
+            </a>
           </div>
         </Styled.GridItem>
         <Styled.GridItem>
@@ -104,6 +134,8 @@ export default function Projects() {
             <a
               href="https://journal.hugotiger.com"
               aria-label="Journal Travel Blog"
+              rel="noopener"
+              target="_blank"
             >
               <Img
                 fluid={data?.journal?.childImageSharp?.fluid}
@@ -120,8 +152,20 @@ export default function Projects() {
               Journal is a super simple travel blog concept showcasing some
               fancy animations created using Framer Motion.
             </p>
-            <a href="https://journal.hugotiger.com">Live demo -></a>
-            <a href="https://github.com/hugotiger/journal">View code</a>
+            <a
+              href="https://journal.hugotiger.com"
+              rel="noopener"
+              target="_blank"
+            >
+              Live demo ->
+            </a>
+            <a
+              href="https://github.com/hugotiger/journal"
+              rel="noopener"
+              target="_blank"
+            >
+              View code
+            </a>
           </div>
         </Styled.GridItem>
       </Styled.Grid>
