@@ -26,4 +26,8 @@ export default createGlobalStyle`
       outline: none;
   }
 
+  p { 
+      color: #68778e
+  }
+
 `

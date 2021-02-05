@@ -10,18 +10,18 @@ const Banner = styled.div`
   h1 {
     line-height: 1.4;
     margin: 0;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
   }
 
   p {
     max-width: 60ch;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.8;
     margin: 0;
 
     .currently {
       display: block;
-      margin-top: 12px;
+      margin-top: 0.75rem;
     }
   }
 

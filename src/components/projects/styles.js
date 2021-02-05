@@ -5,13 +5,12 @@ const Wrapper = styled.section`
   h1 {
     margin: 0;
     font-size: 1.5rem;
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
     font-weight: 600;
   }
   .desc {
     margin-top: 0;
-    margin-bottom: 48px;
-    color: #869ab8;
+    margin-bottom: 3rem;
   }
 `
 
@@ -34,70 +33,44 @@ const GridItem = styled.div`
     font-weight: 500;
     margin-top: 16px;
     margin-bottom: 8px;
-    padding-left: 2px;
   }
 
   p {
     margin: 0;
-    color: #869ab8;
     margin-bottom: 12px;
-    padding-left: 2px;
   }
 
-  a {
+  .project-desc {
     padding-left: 2px;
-    font-size: 14px;
-    cursor: pointer;
-    color: #335eea;
-    text-decoration: none;
-    font-weight: 500;
 
-    &:not(:first-of-type):hover {
-      border-bottom: 1px solid #335eea;
-    }
-
-    &:last-of-type {
-      margin-left: 16px;
-      color: #506690;
+    a {
+      font-size: 0.875rem;
+      color: #335eea;
+      text-decoration: none;
+      font-weight: 500;
 
       &:hover {
-        border-color: #506690;
+        border-bottom: 1px solid currentColor;
+      }
+
+      &:last-of-type {
+        margin-left: 16px;
+        color: #506690;
       }
     }
   }
-`
 
-const ImageWrapper = styled.div`
-  box-shadow: 0 16px 32px rgba(22, 28, 45, 0.05);
-  border-radius: 6px;
-  width: 100%;
-  padding-top: 66.67%;
-  position: relative;
-  /* height: 270px; */
-  overflow: hidden;
-  position: relative;
-  user-select: none;
-  .image-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  img {
-    width: 100%;
-    object-fit: cover;
-  }
+  .img-wrapper {
+    position: relative;
+    box-shadow: 0 16px 32px rgba(22, 28, 45, 0.05);
+    border-radius: 6px;
+    overflow: hidden;
+    user-select: none;
+    transition: filter 0.2s;
 
-  &::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: " ";
-    background: ${props => (props.bg ? props.bg : "#335eea")};
-    opacity: ${props => (props.bg ? 1 : 0.3)};
+    &:hover {
+      filter: brightness(103%) saturate(130%);
+    }
   }
 `
 
@@ -116,6 +89,7 @@ const Pill = styled.span`
     variant === "done" ? "rgba(255, 255, 255, 0.8)" : "#1B2A4E"};
   letter-spacing: 1.6px;
   border-radius: 999px;
+  user-select: none;
 `
 
-export const Styled = { Wrapper, Grid, GridItem, ImageWrapper, Pill }
+export const Styled = { Wrapper, Grid, GridItem, Pill }

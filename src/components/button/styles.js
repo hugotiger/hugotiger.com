@@ -5,9 +5,9 @@ const Button = styled.button`
   background-color: transparent;
   cursor: pointer;
   border: none;
-  height: 48px;
-  padding-left: 16px;
-  padding-right: 16px;
+  height: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,13 +15,13 @@ const Button = styled.button`
   border-radius: 4px;
   transition: background-color 0.3s ease;
   color: #506690;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
   user-select: none;
 
   svg {
-    margin-right: 12px;
+    margin-right: 0.75rem;
   }
 
   &:hover {

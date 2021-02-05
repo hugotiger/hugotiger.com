@@ -17,7 +17,6 @@ const Wrapper = styled.section`
   .desc {
     margin-top: 0;
     margin-bottom: 32px;
-    color: #869ab8;
   }
 
   .grid {
@@ -67,7 +66,6 @@ const Left = styled.div`
   .desc {
     margin-top: 0;
     margin-bottom: 48px;
-    color: #869ab8;
   }
 `
 

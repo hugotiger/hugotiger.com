@@ -1,22 +1,21 @@
 import React from "react"
 import { Styled } from "./styles"
-import Container from "../container"
 import IconButton from "../icon-button"
-import GitHub from "../../assets/github.svg"
+import GitHubIcon from "../../assets/github.svg"
 import { Link } from "gatsby"
 
 export default function Header() {
   return (
     <Styled.Header>
       <Styled.Inner>
-        <a className="logo" href="/">
+        <Link className="logo" to="/">
           Hugo Tiger
-        </a>
+        </Link>
         <a
           href="https://github.com/hugotiger"
           title="Hugo Tiger's Github-profile"
         >
-          <IconButton icon={<GitHub />} />
+          <IconButton icon={<GitHubIcon />} />
         </a>
       </Styled.Inner>
     </Styled.Header>

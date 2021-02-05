@@ -17,7 +17,7 @@ const Footer = styled.footer`
 
 const Inner = styled.div`
   border-top: 1px solid #d9e2ef;
-  height: 120px;
+  height: 128px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -27,11 +27,11 @@ const Inner = styled.div`
 
   @media (max-width: 700px) {
     height: 80px;
-    font-size: 14px;
+    font-size: 0.875rem;
 
     a {
-      font-size: 14px;
-      height: 42px;
+      font-size: 0.875rem;
+      height: 2.625rem;
     }
   }
 `
