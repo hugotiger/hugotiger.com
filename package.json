@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@fontsource/manrope": "^4.1.1",
     "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.24.66",
     "gatsby-image": "^2.4.20",

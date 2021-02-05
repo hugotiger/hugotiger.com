@@ -9,10 +9,7 @@ const IndexPage = () => (
   <>
     <Helmet>
       <title>Hugo Tiger</title>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-      />
+      <html lang="en" />
     </Helmet>
     <Layout>
       <Banner />
