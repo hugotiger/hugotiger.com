@@ -23,34 +23,21 @@ export default function Projects() {
     query {
       journal: file(relativePath: { eq: "journal.png" }) {
         childImageSharp {
-          fluid(
-            maxWidth: 704
-            maxHeight: 448
-            duotone: { highlight: "#c2cff9", shadow: "#2f4692", opacity: 80 }
-          ) {
+          fluid(maxWidth: 704, maxHeight: 448) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       beerTracker: file(relativePath: { eq: "beer-tracker.png" }) {
         childImageSharp {
-          fluid(
-            maxWidth: 704
-            maxHeight: 448
-            duotone: { highlight: "#c2cff9", shadow: "#2f4692", opacity: 80 }
-          ) {
+          fluid(maxWidth: 704, maxHeight: 448) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
       carbonClock: file(relativePath: { eq: "carbon-clock.png" }) {
         childImageSharp {
-          fluid(
-            maxWidth: 704
-            maxHeight: 448
-            duotone: { highlight: "#c2cff9", shadow: "#2f4692", opacity: 50 }
-            cropFocus: CENTER
-          ) {
+          fluid(maxWidth: 704, maxHeight: 448, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }

@@ -12,14 +12,29 @@ const ProjectImageWrapper = styled.div`
   border-radius: 6px;
   overflow: hidden;
   user-select: none;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  filter: saturate(120%);
 
-  .gatsby-image-wrapper {
-    transition: filter 0.2s;
-    filter: brightness(100%) saturate(100%);
-
-    &:hover {
-      filter: brightness(103%) saturate(130%);
+  &:hover {
+    &::after {
+      opacity: 0;
+      transition: opacity 0.3s;
     }
+  }
+  &::after {
+    content: " ";
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: saturate(0) invert(0.5);
+    background: #375dde;
+    mix-blend-mode: color;
+    opacity: 0.5;
+    pointer-events: none;
+    transition: opacity 0.3s;
   }
 `
 
