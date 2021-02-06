@@ -9,7 +9,7 @@ export default function Header() {
     <Styled.Header
       initial={{ opacity: 0, y: -8 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.1, duration: 1, ease: "easeOut" }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <Styled.Inner>
         <Link className="logo" to="/">

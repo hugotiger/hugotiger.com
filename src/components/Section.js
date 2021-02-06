@@ -21,7 +21,7 @@ export function Section({ title, desc, children }) {
     <SectionWrapper
       initial={{ opacity: 0, y: -8 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.7, duration: 1, ease: "easeOut" }}
+      transition={{ delay: 0.6, duration: 1.2, ease: "easeOut" }}
     >
       <h1>{title}</h1>
       <p>{desc}</p>

@@ -3,8 +3,8 @@ import { motion } from "framer-motion"
 
 const Banner = styled(motion.div)`
   min-height: 20vh;
-  max-height: 500px;
-  padding: 80px 0;
+  padding: min(5vh, 5rem) 0;
+
   display: flex;
   flex-direction: column;
   justify-content: center;

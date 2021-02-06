@@ -61,6 +61,15 @@ const ProjectDescWrapper = styled.div`
 
     border-bottom: 1px solid transparent;
     transition: border-color 0.1s;
+    i {
+      background-size: 10px 10px;
+    }
+    svg {
+      stroke: currentColor;
+      vertical-align: middle;
+      margin-left: 0.5rem;
+      transform: translateY(-2px);
+    }
 
     &:hover {
       border-color: currentColor;
