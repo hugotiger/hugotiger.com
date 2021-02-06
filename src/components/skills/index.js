@@ -1,8 +1,10 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
+import { motion, useAnimation } from "framer-motion"
 import { Section } from "../Section"
+import { useInView } from "react-intersection-observer"
 
-const ListGrid = styled.div`
+const ListGrid = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 64px;
@@ -39,12 +41,45 @@ const ListGridItem = styled.div`
   }
 `
 export default function Skills() {
+  const animation = useAnimation()
+  const [ref, inView, _entry] = useInView({ threshold: 0.3 })
+
+  useEffect(() => {
+    if (inView) {
+      animation.start("visible")
+    } else {
+      animation.start("hidden")
+    }
+  }, [animation, inView])
+
+  const variants = {
+    hidden: {
+      y: -8,
+      opacity: 0,
+      transition: {
+        duration: 0.2,
+      },
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+      },
+    },
+  }
+
   return (
     <Section
       title="My skills"
       desc="Here is a selection of some of the technologies I've worked with."
     >
-      <ListGrid>
+      <ListGrid
+        ref={ref}
+        animate={animation}
+        initial="hidden"
+        variants={variants}
+      >
         <ListGridItem>
           <h2>Front-end</h2>
           <ul>
