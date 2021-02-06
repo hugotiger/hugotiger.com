@@ -3,7 +3,11 @@ import { Styled } from "./styles"
 
 export default function Banner() {
   return (
-    <Styled.Banner>
+    <Styled.Banner
+      initial={{ opacity: 0, y: -8 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
+    >
       <h1>
         Hi{" "}
         <span className="wave" role="img" aria-label="Waving hand">

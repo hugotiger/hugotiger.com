@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
-const Header = styled.header`
+const Header = styled(motion.header)`
   display: flex;
   justify-content: center;
   align-items: center;

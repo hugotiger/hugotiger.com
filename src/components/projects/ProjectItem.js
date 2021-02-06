@@ -29,7 +29,7 @@ const ProjectImageWrapper = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    backdrop-filter: saturate(0) invert(0.5);
+    backdrop-filter: saturate(0) invert(0.2);
     background: #375dde;
     mix-blend-mode: color;
     opacity: 0.5;

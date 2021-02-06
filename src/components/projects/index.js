@@ -19,7 +19,7 @@ const Grid = styled.div`
   }
 `
 export default function Projects() {
-  const data = useStaticQuery(graphql`
+  const images = useStaticQuery(graphql`
     query {
       journal: file(relativePath: { eq: "journal.png" }) {
         childImageSharp {
@@ -45,6 +45,8 @@ export default function Projects() {
     }
   `)
 
+  const src = images?.carbonClock?.childImageSharp?.fluid?.src
+
   return (
     <Section
       title="Featured projects"
@@ -53,7 +55,7 @@ export default function Projects() {
       <Grid>
         <ProjectItem
           title="Carbon Clock"
-          imgData={data?.carbonClock?.childImageSharp?.fluid}
+          imgData={images?.carbonClock?.childImageSharp?.fluid}
           demoUrl="https://carbonclock.hugotiger.com"
           githubUrl="https://github.com/hugotiger/carbon-clock"
           description="Carbon Clock is an estimation of how much CO2 can be released into the atmosphere to limit global warming to a maximum of 1.5°C."
@@ -61,15 +63,15 @@ export default function Projects() {
         />
         <ProjectItem
           title="Beer Tracker"
-          imgData={data?.beerTracker?.childImageSharp?.fluid}
+          imgData={images?.beerTracker?.childImageSharp?.fluid}
           demoUrl="https://beertracker.hugotiger.com"
           githubUrl="https://github.com/hugotiger/beer-tracker"
-          description="A simple webpage for tracking your beer consumption. Built using the MERN-stack, styled-components and framer motion."
+          description="Mobile first webpage built using the MERN-stack, styled-components and framer motion."
           pill={<Pill variant="done">Finished</Pill>}
         />
         <ProjectItem
           title="Journal Travel Blog"
-          imgData={data?.journal?.childImageSharp?.fluid}
+          imgData={images?.journal?.childImageSharp?.fluid}
           demoUrl="https://journal.hugotiger.com"
           githubUrl="https://github.com/hugotiger/journal"
           description="Journal is a super simple travel blog concept showcasing some

@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useEffect, useLayoutEffect, useState } from "react"
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
-const SectionWrapper = styled.section`
+const SectionWrapper = styled(motion.section)`
   margin-top: 4rem;
   & > h1 {
     margin: 0;
@@ -17,7 +18,11 @@ const SectionWrapper = styled.section`
 
 export function Section({ title, desc, children }) {
   return (
-    <SectionWrapper>
+    <SectionWrapper
+      initial={{ opacity: 0, y: -8 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.7, duration: 1, ease: "easeOut" }}
+    >
       <h1>{title}</h1>
       <p>{desc}</p>
       {children}

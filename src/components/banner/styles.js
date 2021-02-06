@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
-const Banner = styled.div`
+const Banner = styled(motion.div)`
   min-height: 20vh;
   max-height: 500px;
   padding: 80px 0;
