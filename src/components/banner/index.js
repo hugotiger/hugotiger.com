@@ -22,7 +22,12 @@ export default function Banner() {
         <span className="currently">
           I'm currently on a break from studying Computer Science and
           Engineering at KTH in Stockholm, and am working at{" "}
-          <a href="https://dibz.se" style={{ color: "inherit" }}>
+          <a
+            href="https://dibz.se"
+            rel="noreferrer"
+            target="_blank"
+            style={{ color: "inherit" }}
+          >
             Dibz
           </a>
           .
