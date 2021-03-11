@@ -1,8 +1,8 @@
-import React, { useEffect } from "react"
-import styled from "styled-components"
 import { motion, useAnimation } from "framer-motion"
-import { Section } from "../Section"
+import React, { useEffect } from "react"
 import { useInView } from "react-intersection-observer"
+import styled from "styled-components"
+import { Section } from "../Section"
 
 const ListGrid = styled(motion.div)`
   display: grid;
@@ -42,7 +42,7 @@ const ListGridItem = styled.div`
 `
 export default function Skills() {
   const animation = useAnimation()
-  const [ref, inView, _entry] = useInView({ threshold: 0.3 })
+  const [ref, inView] = useInView({ threshold: 0.3 })
 
   useEffect(() => {
     if (inView) {
