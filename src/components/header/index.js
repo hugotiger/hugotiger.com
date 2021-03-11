@@ -1,8 +1,8 @@
-import React from "react"
-import { Styled } from "./styles"
-import IconButton from "../icon-button"
-import GitHubIcon from "../../assets/github.svg"
 import { Link } from "gatsby"
+import React from "react"
+import GitHubIcon from "../../assets/github.svg"
+import IconButton from "../icon-button"
+import { Styled } from "./styles"
 
 export default function Header() {
   return (
@@ -15,12 +15,14 @@ export default function Header() {
         <Link className="logo" to="/">
           Hugo Tiger
         </Link>
-        <a
+
+        <IconButton
+          icon={<GitHubIcon />}
+          aria-label="GitHub"
+          as="a"
           href="https://github.com/hugotiger"
           title="Hugo Tiger's Github-profile"
-        >
-          <IconButton icon={<GitHubIcon />} aria-label="GitHub" />
-        </a>
+        />
       </Styled.Inner>
     </Styled.Header>
   )
