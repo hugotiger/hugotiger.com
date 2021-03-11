@@ -13,7 +13,7 @@ const Button = styled.button`
   margin: 0;
   padding: 0;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
+  transition: all 0.25s ease;
   color: #161c2d;
   user-select: none;
 
@@ -22,7 +22,6 @@ const Button = styled.button`
   }
 
   &:active {
-    outline: none;
     background-color: rgba(80, 102, 144, 0.15);
   }
 `

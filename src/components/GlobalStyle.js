@@ -16,6 +16,7 @@ export default createGlobalStyle`
       height: 100%;
       display: flex;
       flex-direction: column;
+      outline-offset: 2px;
   }
 
   body {
@@ -25,8 +26,14 @@ export default createGlobalStyle`
       color: #161c2d;
   }
 
-  a {
+  a, button {
       outline: none;
+      box-shadow: none;
+      transition: all 0.25s;
+
+      &:focus-visible {
+          box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+      }
   }
 
   p { 

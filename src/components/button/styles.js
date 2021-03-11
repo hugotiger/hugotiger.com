@@ -13,7 +13,7 @@ const Button = styled.button`
   align-items: center;
   margin: 0;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
+  transition: all 0.25s ease;
   color: #506690;
   font-size: 1rem;
   font-weight: 500;
