@@ -1,12 +1,13 @@
+import Img from "gatsby-image"
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
 
 const ProjectItemContainer = styled.div`
   width: 100%;
 `
 
 const ProjectImageWrapper = styled.div`
+  --duration: 300ms;
   position: relative;
   box-shadow: 0 16px 32px rgba(22, 28, 45, 0.05);
   border-radius: 6px;
@@ -15,10 +16,17 @@ const ProjectImageWrapper = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.04);
   filter: saturate(120%);
 
+  .gatsby-image-wrapper {
+    transition: all var(--duration);
+  }
+
   &:hover {
+    & .gatsby-image-wrapper {
+      transform: scale(1.01);
+    }
     &::after {
-      opacity: 0;
-      transition: opacity 0.3s;
+      opacity: 0.25;
+      transition: opacity 0.25s;
     }
   }
   &::after {
@@ -34,7 +42,7 @@ const ProjectImageWrapper = styled.div`
     mix-blend-mode: color;
     opacity: 0.5;
     pointer-events: none;
-    transition: opacity 0.3s;
+    transition: opacity 0.25s;
   }
 `
 
@@ -60,7 +68,7 @@ const ProjectDescWrapper = styled.div`
     font-weight: 500;
 
     border-bottom: 1px solid transparent;
-    transition: border-color 0.1s;
+    transition: all 0.25s;
     i {
       background-size: 10px 10px;
     }
@@ -74,11 +82,11 @@ const ProjectDescWrapper = styled.div`
     &:hover {
       border-color: currentColor;
     }
+  }
 
-    &:last-of-type {
-      margin-left: 16px;
-      color: #506690;
-    }
+  .github-link {
+    margin-left: 16px;
+    color: #506690;
   }
 `
 
@@ -92,21 +100,39 @@ export function ProjectItem({
 }) {
   return (
     <ProjectItemContainer>
-      <ProjectImageWrapper>
-        <a href={demoUrl} aria-label={title} rel="noreferrer" target="_blank">
+      <a
+        href={demoUrl}
+        aria-label={title}
+        rel="noreferrer"
+        target="_blank"
+        style={{ display: "block" }}
+      >
+        <ProjectImageWrapper>
           <Img fluid={imgData} backgroundColor="#eaecf0" />
           {pill && pill}
-        </a>
-      </ProjectImageWrapper>
+        </ProjectImageWrapper>
+      </a>
       <ProjectDescWrapper>
         <h2>{title}</h2>
         <p>{description}</p>
-        <a href={demoUrl} rel="noreferrer" target="_blank">
+        <a
+          href={demoUrl}
+          rel="noreferrer"
+          target="_blank"
+          className="demo-link"
+        >
           Live demo ->
         </a>
-        <a href={githubUrl} rel="noreferrer" target="_blank">
-          View code
-        </a>
+        {githubUrl && (
+          <a
+            href={githubUrl}
+            rel="noreferrer"
+            target="_blank"
+            className="github-link"
+          >
+            View code
+          </a>
+        )}
       </ProjectDescWrapper>
     </ProjectItemContainer>
   )

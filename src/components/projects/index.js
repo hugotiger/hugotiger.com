@@ -1,8 +1,8 @@
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import styled from "styled-components"
-import { graphql, useStaticQuery } from "gatsby"
-import { Section } from "../Section"
 import { Pill } from "../Pill"
+import { Section } from "../Section"
 import { ProjectItem } from "./ProjectItem"
 
 const Grid = styled.div`
@@ -21,6 +21,13 @@ const Grid = styled.div`
 export default function Projects() {
   const images = useStaticQuery(graphql`
     query {
+      dibzMock: file(relativePath: { eq: "dibz-mock.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 704, maxHeight: 448) {
+            ...GatsbyImageSharpFluid_withWebp_noBase64
+          }
+        }
+      }
       journal: file(relativePath: { eq: "journal.png" }) {
         childImageSharp {
           fluid(maxWidth: 704, maxHeight: 448) {
@@ -45,14 +52,19 @@ export default function Projects() {
     }
   `)
 
-  const src = images?.carbonClock?.childImageSharp?.fluid?.src
-
   return (
     <Section
       title="Featured projects"
-      desc="Here are some projects i've been working on recently. More will be added soon."
+      desc="Here are some of the projects I've been working on recently. "
     >
       <Grid>
+        <ProjectItem
+          title="Dibz"
+          imgData={images?.dibzMock?.childImageSharp?.fluid}
+          demoUrl="https://dibz.se"
+          description="Dibz is a startup bringing queueing into the digital age. I've been solely responsible for frontend-development including UI/UX-design."
+          pill={<Pill variant="active">In progress</Pill>}
+        />
         <ProjectItem
           title="Carbon Clock"
           imgData={images?.carbonClock?.childImageSharp?.fluid}
