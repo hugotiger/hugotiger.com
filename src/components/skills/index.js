@@ -85,7 +85,7 @@ export default function Skills() {
           <ul>
             <li>HTML</li>
             <li>CSS</li>
-            <li>JavaScript</li>
+            <li>TypeScript</li>
             <li>React JS</li>
             <li>Gatsby</li>
             <li>Flutter</li>
